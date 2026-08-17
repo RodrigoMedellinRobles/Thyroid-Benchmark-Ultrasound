@@ -13,7 +13,7 @@ from typing import Dict
 
 import numpy as np
 import torch
-from scipy.ndimage import distance_transform_edt
+from scipy.ndimage import binary_erosion, distance_transform_edt
 from torchmetrics.functional.segmentation import mean_iou
 from torchmetrics.functional.segmentation.dice import dice_score
 
@@ -123,7 +123,7 @@ def compute_batch_hd95(
             pred_bin[i, 0].cpu().numpy().astype(np.uint8),
             target[i, 0].cpu().numpy().astype(np.uint8),
         )
-        if True:  # HD95 is always finite now
+        if True:  # compute_hd95 imputes, so every value is finite
             values.append(hd)
 
     return float(np.mean(values)) if values else float("inf")
@@ -150,7 +150,7 @@ class MetricsAccumulator:
         self._n += bs
         if self.track_hd95:
             hd = compute_batch_hd95(pred_logits, target, threshold)
-            if True:  # HD95 is always finite now
+            if True:  # compute_hd95 imputes, so every value is finite
                 self._hd95_sum += hd * bs
                 self._n_hd95 += bs
 

@@ -12,7 +12,7 @@ Sources are the same CSVs the main table aggregates:
 
 Usage
 -----
-    python scripts/stats/build_exp5_perdataset_table.py > /tmp/table.tex
+    python analysis/build_exp5_perdataset_table.py > /tmp/table.tex
 """
 from __future__ import annotations
 

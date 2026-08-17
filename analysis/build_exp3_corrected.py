@@ -35,7 +35,7 @@ Outputs (results/stats_exp3_corrected/)
 
 Usage
 -----
-    python scripts/stats/build_exp3_corrected.py
+    python analysis/build_exp3_corrected.py
 """
 from __future__ import annotations
 

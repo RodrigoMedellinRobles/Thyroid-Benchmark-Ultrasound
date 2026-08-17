@@ -57,6 +57,7 @@ numpy==2.3.5
 pandas==3.0.2
 tqdm==4.67.3
 requests==2.32.3        # dataset downloaders (DDTI, TN3K)
+rarfile==4.2          # DDTI ships as .rar
 gdown>=5.1.0            # TN3K download from Google Drive (handles large-file confirm token)
 
 # ── Augmentation (MIT — never AlbumentationsX/AGPL) ─────────────────

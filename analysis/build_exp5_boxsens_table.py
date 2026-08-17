@@ -26,8 +26,8 @@ used and the comparison would be meaningless.
 
 Usage
 -----
-    python scripts/stats/build_exp5_boxsens_table.py
-    python scripts/stats/build_exp5_boxsens_table.py --check-backup
+    python analysis/build_exp5_boxsens_table.py
+    python analysis/build_exp5_boxsens_table.py --check-backup
 """
 from __future__ import annotations
 

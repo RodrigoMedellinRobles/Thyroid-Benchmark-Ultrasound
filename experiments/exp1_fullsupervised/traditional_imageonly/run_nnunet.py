@@ -61,7 +61,7 @@ def main() -> None:
 
     did = DATASET_IDS[args.dataset]
     data_root = Path("data")
-    exp_dir   = Path("experiments/01_fullsup_traditional/results/nnunet")
+    exp_dir   = Path("experiments/exp1_fullsupervised/traditional_imageonly/results/nnunet")
 
     # find dataset dir
     candidates = list((data_root / "nnunet_raw").glob(f"Dataset{did}_*"))
@@ -93,7 +93,7 @@ def main() -> None:
     avg = {k: float(np.mean([m[k] for m in all_m]))
            for k in ("dice", "iou", "precision", "recall", "hd95")}
 
-    results_dir = Path("experiments/01_fullsup_traditional/results/nnunet")
+    results_dir = Path("experiments/exp1_fullsupervised/traditional_imageonly/results/nnunet")
     results_dir.mkdir(parents=True, exist_ok=True)
 
     # Aggregate CSV (same format as U-Net)

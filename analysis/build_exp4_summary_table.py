@@ -25,7 +25,7 @@ the image diagonal rather than dropped.
 
 Usage
 -----
-    python scripts/stats/build_exp4_summary_table.py
+    python analysis/build_exp4_summary_table.py
 """
 from __future__ import annotations
 

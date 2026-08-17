@@ -9,7 +9,7 @@ the exact ZeroShotDataset + get_gt_box used by Exp 2, which reproduces the
 box-conditioned CNN floors (box_eval.py) to four decimals — confirming the tight
 boxes are pixel-identical across pipelines.
 
-Usage: python scripts/stats/compute_boxfill_floor.py
+Usage: python analysis/compute_boxfill_floor.py
 """
 import sys
 from pathlib import Path
@@ -17,8 +17,8 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from src.models.foundation_base import ZeroShotDataset, get_gt_box
-from src.evaluation.metrics import compute_hd95
+from thyroidbench.models.foundation_base import ZeroShotDataset, get_gt_box
+from thyroidbench.metrics import compute_hd95
 
 DATASETS = ["ddti", "tn3k", "thyroidxl", "stanford_aimi"]
 DATA_ROOT = Path("data/processed")

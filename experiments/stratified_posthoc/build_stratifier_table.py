@@ -15,7 +15,7 @@ stratified figure compares like-for-like (all models prompted) against the LoRA
 foundation models. There are no image-only reads.
 
 Output:
-    experiments/exp7_stratified/results/stratifier_table_long.csv
+    experiments/stratified_posthoc/results/stratifier_table_long.csv
 
 Usage:
     python build_stratifier_table.py [--fewshot-fraction 0.05]
@@ -35,7 +35,7 @@ import pandas as pd
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
-# Original data paths (NOT copies under experiments/exp7_stratified/metadata/)
+# Original data paths (NOT copies under experiments/stratified_posthoc/metadata/)
 PATH_THYROIDXL_META = REPO_ROOT / "data/raw/extracted/ThyroidXL/stats/id2info_eng.json"
 PATH_STANFORD_META = REPO_ROOT / "data/raw/extracted/Stanford/metadata.csv"
 PATH_DDTI_XML_DIR = REPO_ROOT / "data/raw/extracted/DDTI-Pedraza_Digital_Database_Thyroid_SPIE"
@@ -64,7 +64,7 @@ _BOXCOND_CNN_NAME = {"unet": "unet_resnet50",
                      "transunet": "transunet_r50_vitb16"}
 
 # Output
-PATH_OUT = REPO_ROOT / "experiments/exp7_stratified/results/stratifier_table_long.csv"
+PATH_OUT = REPO_ROOT / "experiments/stratified_posthoc/results/stratifier_table_long.csv"
 
 # 2026-07 reconfig (Exp 7 stratified re-run):
 #   - datasets restricted to ThyroidXL + Stanford AIMI (DDTI dropped from

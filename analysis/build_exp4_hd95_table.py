@@ -32,8 +32,8 @@ foundation cross   experiments/exp4_crossdataset/foundation/results_hd95b/ (fall
 
 Usage
 -----
-    python scripts/stats/build_exp4_hd95_table.py
-    python scripts/stats/build_exp4_hd95_table.py --out /tmp/check.csv
+    python analysis/build_exp4_hd95_table.py
+    python analysis/build_exp4_hd95_table.py --out /tmp/check.csv
 """
 from __future__ import annotations
 

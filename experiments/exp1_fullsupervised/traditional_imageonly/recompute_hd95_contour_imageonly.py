@@ -19,7 +19,7 @@ definition. DSC is written alongside as a provenance check: it must reproduce
 the published value, since no other change is applied here.
 
 This is the image-only twin of
-``experiments/01v2_fullsup_boxcond/recompute_hd95_contour.py`` and uses the same
+``experiments/exp1_fullsupervised/traditional_boxcond/recompute_hd95_contour.py`` and uses the same
 contour function, the same empty-prediction cap and the same output schema. The
 only differences are the checkpoint layout, the 3-channel network and the
 absence of a box channel.
@@ -31,8 +31,8 @@ Outputs
 
 Usage
 -----
-    python experiments/01_fullsup_traditional/recompute_hd95_contour_imageonly.py
-    python experiments/01_fullsup_traditional/recompute_hd95_contour_imageonly.py --datasets ddti
+    python experiments/exp1_fullsupervised/traditional_imageonly/recompute_hd95_contour_imageonly.py
+    python experiments/exp1_fullsupervised/traditional_imageonly/recompute_hd95_contour_imageonly.py --datasets ddti
 """
 from __future__ import annotations
 
@@ -58,7 +58,7 @@ logger = logging.getLogger(__name__)
 
 _BUILD = {"unet": build_unet, "transunet": build_transunet}
 _NAME = {"unet": "unet_resnet50", "transunet": "transunet_r50_vitb16"}
-_EXP_DIR = REPO / "experiments/01_fullsup_traditional"
+_EXP_DIR = REPO / "experiments/exp1_fullsupervised/traditional_imageonly"
 OUT_DIR = _EXP_DIR / "results/hd95_contour"
 HD95_INF_CAP = float(np.sqrt(2) * 512)  # image diagonal; matches compute_stats.py policy.
 

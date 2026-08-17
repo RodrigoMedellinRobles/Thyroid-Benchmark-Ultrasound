@@ -4,8 +4,8 @@ Sec 5.1 — Full-supervised traditional baselines (U-Net, TransUNet).
 nnUNet has its own framework — see run_nnunet.py.
 
 Usage:
-    python experiments/01_fullsup_traditional/run.py --model unet      --dataset thyroidxl
-    python experiments/01_fullsup_traditional/run.py --model transunet --dataset tn3k
+    python experiments/exp1_fullsupervised/traditional_imageonly/run.py --model unet      --dataset thyroidxl
+    python experiments/exp1_fullsupervised/traditional_imageonly/run.py --model transunet --dataset tn3k
 """
 
 import argparse
@@ -70,14 +70,14 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--num_workers", type=int, default=4)
     p.add_argument("--seed",        type=int, default=42)
     p.add_argument("--wandb_project", default="thyroidbench")
-    p.add_argument("--wandb_entity",  default="rodrigobloomstandard")
+    p.add_argument("--wandb_entity",  default=None)
     p.add_argument("--no_wandb", action="store_true")
     p.add_argument("--data_root", default="data")
     p.add_argument("--results_dir",    default=None,
-                   help="default: experiments/01_fullsup_traditional/results/{model}")
+                   help="default: experiments/exp1_fullsupervised/traditional_imageonly/results/{model}")
     p.add_argument("--checkpoint_dir", default=None,
-                   help="default: experiments/01_fullsup_traditional/results/{model}/checkpoints")
-    p.add_argument("--logs_dir",       default="experiments/01_fullsup_traditional/logs")
+                   help="default: experiments/exp1_fullsupervised/traditional_imageonly/results/{model}/checkpoints")
+    p.add_argument("--logs_dir",       default="experiments/exp1_fullsupervised/traditional_imageonly/logs")
     return p.parse_args()
 
 
@@ -85,7 +85,7 @@ def main() -> None:
     args = parse_args()
     spec = _MODELS[args.model]
 
-    base = Path("experiments/01_fullsup_traditional/results_v2") / args.model
+    base = Path("experiments/exp1_fullsupervised/traditional_imageonly/results") / args.model
     results_dir    = Path(args.results_dir    or base)
     checkpoint_dir = Path(args.checkpoint_dir or base / "checkpoints")
     logs_dir       = Path(args.logs_dir)

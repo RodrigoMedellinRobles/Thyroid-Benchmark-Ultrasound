@@ -2,10 +2,10 @@
 Stratified analysis for Exp 6.
 
 Inputs:
-    experiments/exp7_stratified/results/stratifier_table_long.csv
+    experiments/stratified_posthoc/results/stratifier_table_long.csv
         (produced by build_stratifier_table.py)
 
-Outputs (under experiments/exp7_stratified/results/):
+Outputs (under experiments/stratified_posthoc/results/):
     figure3_data.csv          per-(dataset,stratifier,bin,model) median + CI95
     stats_per_bin.csv         Wilcoxon paired (per (dataset,stratifier,bin)
                               for each foundation-vs-traditional model pair)
@@ -32,8 +32,8 @@ from scipy import stats
 from statsmodels.stats.multitest import multipletests
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-PATH_LONG = REPO_ROOT / "experiments/exp7_stratified/results/stratifier_table_long.csv"
-PATH_OUT_DIR = REPO_ROOT / "experiments/exp7_stratified/results"
+PATH_LONG = REPO_ROOT / "experiments/stratified_posthoc/results/stratifier_table_long.csv"
+PATH_OUT_DIR = REPO_ROOT / "experiments/stratified_posthoc/results"
 
 RNG_SEED = 42
 N_BOOT = 1000
