@@ -175,7 +175,7 @@ deterministically by `00_setup/03_make_splits.ipynb` (seed 42) once you have the
 
 ## License and citation
 
-MIT, copyright Rodrigo Medellin-Robles — see [`LICENSE`](LICENSE). Every dataset
+MIT, copyright Rodrigo Medellin-Robles — see [`LICENSE`](LICENSE) and [`CITATION.md`](CITATION.md). Every dataset
 this benchmark evaluates is public, so the code is released permissively: re-run
 it, extend it, disagree with it. If you use it, please cite the paper
 ([`CITATION.cff`](CITATION.cff)).
