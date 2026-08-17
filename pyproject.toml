@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thyroidbench"
+version = "1.0.0"
+description = "Thyroid-Benchmark-Ultrasound: a cross-dataset benchmark of promptable foundation models and traditional baselines for thyroid ultrasound nodule segmentation (zero-shot, few-shot, fully-supervised)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+# Runtime dependencies are pinned in requirements.txt / requirements.txt.
+# Install the package itself in editable mode to expose the `thyroidbench` API:
+#     pip install -e .
+
+[tool.setuptools]
+package-dir = { "" = "." }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["thyroidbench*"]

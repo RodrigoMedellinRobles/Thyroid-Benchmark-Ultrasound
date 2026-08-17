@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below."
+title: "Promptable Segmentation Models for Thyroid Ultrasound Nodule Segmentation: A Reproducible Cross-Dataset Benchmark of Zero-Shot, Few-Shot, and Fully-Supervised Regimes"
+authors:
+  - family-names: "Medellin-Robles"
+    given-names: "Rodrigo"
+    affiliation: "Bloom Standard Inc."
+    orcid: "https://orcid.org/0009-0008-4288-8622"
+year: 2026
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/RodrigoMedellinRobles/Thyroid-Benchmark-Ultrasound"
+preferred-citation:
+  type: article
+  title: "Promptable Segmentation Models for Thyroid Ultrasound Nodule Segmentation: A Reproducible Cross-Dataset Benchmark of Zero-Shot, Few-Shot, and Fully-Supervised Regimes"
+  authors:
+    - family-names: "Medellin-Robles"
+      given-names: "Rodrigo"
+      affiliation: "Bloom Standard Inc."
+  year: 2026
+  notes: "Manuscript under review."

@@ -1,0 +1,45 @@
+# --- data (never committed; see 00_setup/) ---
+# The directories are excluded by their contents rather than by name, because a
+# negation cannot re-include a file whose parent directory is itself excluded.
+data/raw/*
+data/processed/*
+!data/raw/README.txt
+!data/processed/.gitkeep
+
+# Split manifests are index files, not data, and only the two open datasets are
+# committed. The gated splits carry filenames covered by their data-use
+# agreements, so they are excluded even though the directory is tracked.
+data/splits/thyroidxl_*.csv
+data/splits/stanford_aimi_*.csv
+
+# Preprocessing writes sample overviews of every dataset, gated ones included.
+figures/
+data/cineclip_videos/
+
+# --- model weights (not distributed; regenerate via notebooks) ---
+pretrained_models
+pretrained_models/
+**/checkpoints/*
+!**/checkpoints/.gitkeep
+!**/checkpoints/README.txt
+
+# --- python / tooling ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# --- logs / tracking ---
+wandb/
+logs/
+*.log
+
+# --- experiment outputs (regenerated locally, never committed) ---
+# Every metric CSV is produced by running the experiment. Some of them key rows
+# by patient, clip or file id, which for the two gated datasets are identifiers
+# covered by their data-use agreements. The results/ folders ship empty.
+**/results/**
+!**/results/README.txt
