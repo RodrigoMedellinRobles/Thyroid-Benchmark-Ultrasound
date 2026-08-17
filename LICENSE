@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Bloom Standard Inc. — Rodrigo Medellin-Robles
+Copyright (c) 2026 Rodrigo Medellin-Robles
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+--------------------------------------------------------------------------------
+
+CITATION
+
+This code accompanies a research paper. Every dataset it evaluates is public,
+and the code is released under the permissive terms above so that the benchmark
+can be re-run, extended and disputed freely.
+
+If you use this code, or results produced with it, please cite the paper. See
+CITATION.cff for the machine-readable record.
+
+The four datasets carry their own licences and data use agreements, two of them
+requiring an access request. Nothing here redistributes any of them, and using
+this code does not grant you rights to the data; honour each dataset's terms
+separately.

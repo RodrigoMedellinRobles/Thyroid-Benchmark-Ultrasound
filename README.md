@@ -173,7 +173,13 @@ deterministically by `00_setup/03_make_splits.ipynb` (seed 42) once you have the
 
 ---
 
-## License
+## License and citation
 
-See [`LICENSE`](LICENSE). Please also honor the individual licenses / data-use
-agreements of the four datasets.
+MIT, copyright Rodrigo Medellin-Robles — see [`LICENSE`](LICENSE). Every dataset
+this benchmark evaluates is public, so the code is released permissively: re-run
+it, extend it, disagree with it. If you use it, please cite the paper
+([`CITATION.cff`](CITATION.cff)).
+
+The datasets keep their own licences and data use agreements, two of them behind
+an access request. Nothing here redistributes them, and this licence grants no
+rights to the data.
